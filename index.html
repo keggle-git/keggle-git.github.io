@@ -30,6 +30,7 @@ I am a licensed Professional Engineer (PE) in the state of New York.
 <p>
 My research interests include superstructure formulation, optimization, causality, waste valorization, world models and market decentralization.
 </p>
+<figure style="max-width:920px"><img src="images/taken_made_thrown_away.jpg" alt="A grid of photos in the style of an Are.na channel: forests, reefs and coal seams; mountaintop removal, the Deepwater Horizon fire and a gas flare; steel works and refineries; grocery aisles and traffic; a landfill and albatrosses full of plastic; ending with the note that what we throw away could replace what we take"><figcaption>Taken, made, thrown away. Photos are public domain or Creative Commons, credited under each image.</figcaption></figure>
 <h3>Education</h3>
 M.S. Chemical Engineering, Carnegie Mellon University (Expected 2026)<br>
 B.S. Chemical Engineering (Minors: Bioengineering, Chemistry), Texas Tech University, 2015
@@ -71,5 +72,76 @@ I have worked on over 35 industry projects with clients including the World Bank
 </p></li>
 </ul>
 <hr>
+<!-- cat helper -->
+<style>
+#kcat{position:fixed;right:18px;bottom:14px;z-index:50;font-family:-apple-system,"Helvetica Neue",Arial,sans-serif}
+#kcat-btn{background:none;border:0;padding:0;cursor:pointer;display:block;margin-left:auto}
+#kcat-btn img{width:78px;height:auto;display:block;filter:drop-shadow(0 4px 8px rgba(0,0,0,.18));animation:kcat-bob 3.2s ease-in-out infinite;transform-origin:50% 100%}
+#kcat-btn:hover img{animation:kcat-wiggle .6s ease-in-out}
+@keyframes kcat-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes kcat-wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}
+@media (prefers-reduced-motion:reduce){#kcat-btn img{animation:none}}
+#kcat-hi{position:absolute;right:70px;bottom:92px;background:#fff;border:1px solid #e3e3e3;border-radius:14px 14px 4px 14px;padding:8px 12px;font-size:13px;color:#222;box-shadow:0 4px 14px rgba(0,0,0,.08);white-space:nowrap;opacity:0;transition:opacity .4s}
+#kcat-hi.show{opacity:1}
+#kcat-panel{display:none;position:absolute;right:0;bottom:104px;width:330px;max-width:calc(100vw - 36px);max-height:70vh;overflow:auto;background:#fff;border:1px solid #e3e3e3;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.14);padding:16px 16px 14px;font-size:14px;line-height:1.45;color:#222}
+#kcat.open #kcat-panel{display:block}
+#kcat.open #kcat-hi{display:none}
+#kcat-panel h4{margin:0 0 2px;font-size:15px}
+#kcat-panel .sub{color:#888;font-size:12px;margin-bottom:10px}
+#kcat-panel .q{display:block;width:100%;text-align:left;background:#f6f6f6;border:1px solid #ececec;border-radius:9px;padding:8px 10px;margin:6px 0;font:inherit;color:#222;cursor:pointer}
+#kcat-panel .q:hover{background:#efefef}
+#kcat-ans{background:#fffbe9;border:1px solid #f1e6b8;border-radius:9px;padding:10px 11px;margin:8px 0;display:none}
+#kcat-panel .row{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 2px}
+#kcat-panel .row a{font-size:13px;border:1px solid #e3e3e3;border-radius:999px;padding:5px 10px;color:#1a4fa3;text-decoration:none}
+#kcat-panel .row a:hover{background:#f3f7ff}
+#kcat-panel .lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#999;margin-top:12px}
+#kcat-close{position:absolute;top:8px;right:10px;border:0;background:none;font-size:18px;color:#999;cursor:pointer}
+@media (max-width:600px){#kcat-btn img{width:62px}#kcat-panel{bottom:86px}#kcat-hi{bottom:76px;right:56px}}
+</style>
+<div id="kcat">
+  <div id="kcat-hi">hi! want the plain terms version?</div>
+  <div id="kcat-panel" role="dialog" aria-label="Ask about Keegan's work">
+    <button id="kcat-close" aria-label="Close">×</button>
+    <h4>Keegan's work, in plain terms</h4>
+    <div class="sub">Pick a question, ask an AI or send her a message.</div>
+    <button class="q" data-a="plain">What does she actually do?</button>
+    <button class="q" data-a="why">Why waste instead of oil?</button>
+    <button class="q" data-a="tool">What does her research tool do?</button>
+    <button class="q" data-a="past">What has she worked on before?</button>
+    <div id="kcat-ans" aria-live="polite"></div>
+    <div class="lbl">Ask an AI about her work</div>
+    <div class="row"><a id="kcat-gpt" target="_blank" rel="noopener">Ask ChatGPT</a><a id="kcat-claude" target="_blank" rel="noopener">Ask Claude</a></div>
+    <div class="lbl">Message Keegan</div>
+    <div class="row">
+      <a id="kcat-mail">Email</a>
+      <a href="https://www.linkedin.com/in/keegandempsey/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/keegsfd_finsta/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://substack.com/@keegsfd" target="_blank" rel="noopener">Substack</a>
+      <a href="https://github.com/keggle-git" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <button id="kcat-btn" aria-label="Open the helper cat" aria-expanded="false"><img src="images/cat.png" alt="A small white cat"></button>
+</div>
+<script>
+(function(){
+  var A={
+    plain:"Keegan is a chemical engineer who figures out how towns and cities could turn what they throw away, like sewage, landfill trash and factory exhaust, into the fuels, plastics, fertilizer and power they currently import. The goal is to cut pollution while lowering costs and creating local jobs.",
+    why:"Oil and gas have to be found, drilled, shipped and refined, often far away and with a lot of damage along the way. Waste is already here, already collected and usually costs money to get rid of. Turning it into useful products keeps money and jobs local and cuts emissions at the same time.",
+    tool:"Her research tool starts by mapping what a region actually has: wastewater plants, landfills, factories, roads and pipelines, all from public records. It then tests which ways of converting that waste would work physically, and compares them on cost, emissions, policy limits and local jobs. Allegheny County around Pittsburgh is the first test case.",
+    past:"Before grad school she spent over 8 years in industry: a hydrogen and clean fuel strategy for Durban, South Africa; a World Bank study on renewables and hydrogen for Chile's isolated grids; a national study on water for hydrogen in Australia; flood protection for New York City subway infrastructure and cost models for an electrolyzer startup."
+  };
+  var root=document.getElementById('kcat'),btn=document.getElementById('kcat-btn'),ans=document.getElementById('kcat-ans'),hi=document.getElementById('kcat-hi');
+  function toggle(o){root.classList.toggle('open',o);btn.setAttribute('aria-expanded',o?'true':'false');}
+  btn.addEventListener('click',function(){toggle(!root.classList.contains('open'));});
+  document.getElementById('kcat-close').addEventListener('click',function(){toggle(false);});
+  root.querySelectorAll('.q').forEach(function(q){q.addEventListener('click',function(){ans.textContent=A[q.dataset.a];ans.style.display='block';});});
+  var prompt="Explain the work of Keegan Dempsey (she/her), a chemical engineer and New York PE, in plain terms. Use her website https://keggle-git.github.io : what problem she works on, how her research works and why it matters.";
+  document.getElementById('kcat-gpt').href='https://chatgpt.com/?q='+encodeURIComponent(prompt);
+  document.getElementById('kcat-claude').href='https://claude.ai/new?q='+encodeURIComponent(prompt);
+  document.getElementById('kcat-mail').href='mailto:'+['keegand','andrew.cmu.edu'].join('@');
+  setTimeout(function(){if(!root.classList.contains('open'))hi.classList.add('show');},2500);
+  setTimeout(function(){hi.classList.remove('show');},11000);
+})();
+</script>
 </body>
 </html>
