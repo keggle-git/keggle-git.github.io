@@ -90,7 +90,8 @@ I have worked on over 35 industry projects with clients including the World Bank
 #kcat-panel .sub{color:#888;font-size:12px;margin-bottom:10px}
 #kcat-panel .q{display:block;width:100%;text-align:left;background:#f6f6f6;border:1px solid #ececec;border-radius:9px;padding:8px 10px;margin:6px 0;font:inherit;color:#222;cursor:pointer}
 #kcat-panel .q:hover{background:#efefef}
-#kcat-ans{background:#fffbe9;border:1px solid #f1e6b8;border-radius:9px;padding:10px 11px;margin:8px 0;display:none}
+#kcat-ans{background:#fffbe9;border:1px solid #f1e6b8;border-radius:0 0 9px 9px;border-top:0;padding:10px 11px;margin:-7px 0 8px;display:none}
+#kcat-panel .q.on{background:#fff4c9;border-color:#f1e6b8;border-radius:9px 9px 0 0}
 #kcat-panel .row{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 2px}
 #kcat-panel .row a{font-size:13px;border:1px solid #e3e3e3;border-radius:999px;padding:5px 10px;color:#1a4fa3;text-decoration:none}
 #kcat-panel .row a:hover{background:#f3f7ff}
@@ -111,6 +112,7 @@ I have worked on over 35 industry projects with clients including the World Bank
     <button class="q" data-a="tool">What does her research tool do?</button>
     <button class="q" data-a="math">Give me the technical version</button>
     <button class="q" data-a="past">What has she worked on before?</button>
+    <button class="q" data-a="movie">What is Keegan's favorite Australian movie?</button>
     <div id="kcat-ans" aria-live="polite"></div>
     <div class="lbl">Ask an AI about her work</div>
     <div class="row"><a id="kcat-gpt" target="_blank" rel="noopener">Ask ChatGPT</a><a id="kcat-claude" target="_blank" rel="noopener">Ask Claude</a></div>
@@ -132,15 +134,16 @@ I have worked on over 35 industry projects with clients including the World Bank
     why:"Oil and gas have to be found, drilled, shipped and refined, often far away and with a lot of damage along the way. Waste is already here, already collected and usually costs money to get rid of. Turning it into useful products keeps money and jobs local and cuts emissions at the same time.",
     tool:"Her research tool starts by mapping what a region actually has: wastewater plants, landfills, factories, roads and pipelines, all from public records. It then tests which ways of converting that waste would work physically, and compares them on cost, emissions, policy limits and local jobs. Allegheny County around Pittsburgh is the first test case.",
     prove:"That the place decides whether a plant works. Most waste to fuel projects are designed as generic plants and then dropped somewhere. She is testing whether designing from what a place already has, its waste, pipes, power, markets and rules, can reliably find the pathways that make sense and honestly show when none do.",
-    deadend:"A lot of people think so, because many projects have failed. Waste is messy and spread out, so collecting it is expensive, small plants lose economies of scale and high profile projects like Fulcrum BioEnergy's Nevada plant ended in bankruptcy. Her argument is that many of those failures came from one size fits all plants in the wrong places, not from the chemistry. A plant that sits next to its waste, shares existing infrastructure and sells into local markets faces very different economics.",
+    deadend:"A lot of people think so, because many projects have failed. Waste is messy and spread out, so collecting it is expensive, small plants lose economies of scale and high profile projects like Fulcrum BioEnergy's Nevada plant ended in bankruptcy. Her argument is that many of those failures came from one size fits all thinking and enterprise centered business plans and business cases, not from the chemistry. A plant that sits next to its waste, shares existing infrastructure and sells into local markets faces very different economics.",
     math:"Under the hood it is a superstructure optimization problem. From regional data the tool generates a graph of candidate routes: feeds, reactors, separations, recycles, utilities and products. Each route becomes a mixed integer nonlinear program, where binary variables choose units and connections and continuous variables carry flows, compositions, temperatures and duties, all subject to mass, species and energy balances. The objective is total annual cost, meaning annualized capital plus operating cost. Before the expensive solves, cheap lower bounds from structure, stoichiometry and thermodynamics prune any route whose best case cannot beat simply buying the product.",
+    movie:"<i>He Died with a Felafel in His Hand</i> (2001).",
     past:"Before grad school she spent over 8 years in industry. Keegan has worked as both a chemical and a mechanical engineer in design roles on massive infrastructure projects, including Delta's new terminal at LaGuardia Airport. She was also lead analyst on a hydrogen and clean fuel strategy for Durban, South Africa, worked on a World Bank study of renewables and hydrogen for Chile's isolated grids and a national study on water for hydrogen in Australia and built the cost model for an electrolyzer startup."
   };
   var root=document.getElementById('kcat'),btn=document.getElementById('kcat-btn'),ans=document.getElementById('kcat-ans'),hi=document.getElementById('kcat-hi');
   function toggle(o){root.classList.toggle('open',o);btn.setAttribute('aria-expanded',o?'true':'false');}
   btn.addEventListener('click',function(){toggle(!root.classList.contains('open'));});
   document.getElementById('kcat-close').addEventListener('click',function(){toggle(false);});
-  root.querySelectorAll('.q').forEach(function(q){q.addEventListener('click',function(){ans.textContent=A[q.dataset.a];ans.style.display='block';});});
+  root.querySelectorAll('.q').forEach(function(q){q.addEventListener('click',function(){var same=ans.dataset.k===q.dataset.a&&ans.style.display==='block';root.querySelectorAll('.q').forEach(function(b){b.classList.remove('on');});if(same){ans.style.display='none';ans.dataset.k='';return;}q.insertAdjacentElement('afterend',ans);ans.innerHTML=A[q.dataset.a];ans.dataset.k=q.dataset.a;ans.style.display='block';q.classList.add('on');});});
   var prompt="Explain the work of Keegan Dempsey (she/her), a chemical engineer and New York PE, in plain terms. Use her website https://keggle-git.github.io : what problem she works on, how her research works and why it matters.";
   document.getElementById('kcat-gpt').href='https://chatgpt.com/?q='+encodeURIComponent(prompt);
   document.getElementById('kcat-claude').href='https://claude.ai/new?q='+encodeURIComponent(prompt);
