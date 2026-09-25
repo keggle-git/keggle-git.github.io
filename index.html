@@ -30,7 +30,7 @@ I am a licensed Professional Engineer (PE) in the state of New York.
 <p>
 My research interests include superstructure formulation, optimization, causality, waste valorization, world models and market decentralization.
 </p>
-<figure style="max-width:920px"><img src="images/taken_made_thrown_away.jpg?v=5" alt="A grid of photos following the global supply chain: forests, reefs and coal seams; mountaintop removal, the Deepwater Horizon fire, a gas flare, the 1991 Kuwait oil fires and Amazon burning; refineries; a tanker convoy in the Gulf and data centers; grocery aisles and traffic; a landfill and albatrosses full of plastic; ending with the note that what we throw away could replace what we take"><figcaption>Photos are public domain or Creative Commons, credited under each image.</figcaption></figure>
+<figure style="max-width:920px"><img src="images/taken_made_thrown_away.jpg?v=6" alt="A grid of photos following the global supply chain: forests, reefs and coal seams; mountaintop removal, the Deepwater Horizon fire, a gas flare, the 1991 Kuwait oil fires and Amazon burning; refineries; a tanker convoy in the Gulf and data centers; grocery aisles and traffic; a landfill and albatrosses full of plastic; ending with the note that what we throw away could replace what we take"><figcaption>Photos are public domain or Creative Commons, credited under each image.</figcaption></figure>
 <h3>Education</h3>
 M.S. Chemical Engineering, Carnegie Mellon University (Expected 2026)<br>
 B.S. Chemical Engineering (Minors: Bioengineering, Chemistry), Texas Tech University, 2015
@@ -103,7 +103,7 @@ I have worked on over 35 industry projects with clients including the World Bank
   <div id="kcat-hi">你好! (I'm learning) want the plain terms version?</div>
   <div id="kcat-panel" role="dialog" aria-label="Ask about Keegan's work">
     <button id="kcat-close" aria-label="Close">×</button>
-    <h4>Keegan's work, in plain terms</h4>
+    <h4>你好! Keegan's work, in plain terms</h4>
     <div class="sub">Pick a question, ask an AI or send her a message.</div>
     <button class="q" data-a="plain">What does she actually do?</button>
     <button class="q" data-a="why">Why waste instead of oil?</button>
@@ -140,7 +140,7 @@ I have worked on over 35 industry projects with clients including the World Bank
     past:"Before grad school she spent over 8 years in industry. Keegan has worked as both a chemical and a mechanical engineer in design roles on massive infrastructure projects, including Delta's new terminal at LaGuardia Airport. She was also lead analyst on a hydrogen and clean fuel strategy for Durban, South Africa, worked on a World Bank study of renewables and hydrogen for Chile's isolated grids and a national study on water for hydrogen in Australia and built the cost model for an electrolyzer startup."
   };
   var root=document.getElementById('kcat'),btn=document.getElementById('kcat-btn'),ans=document.getElementById('kcat-ans'),hi=document.getElementById('kcat-hi');
-  function toggle(o){root.classList.toggle('open',o);btn.setAttribute('aria-expanded',o?'true':'false');}
+  function toggle(o){hi.classList.remove('show');root.classList.toggle('open',o);btn.setAttribute('aria-expanded',o?'true':'false');}
   btn.addEventListener('click',function(){toggle(!root.classList.contains('open'));});
   document.getElementById('kcat-close').addEventListener('click',function(){toggle(false);});
   root.querySelectorAll('.q').forEach(function(q){q.addEventListener('click',function(){var same=ans.dataset.k===q.dataset.a&&ans.style.display==='block';root.querySelectorAll('.q').forEach(function(b){b.classList.remove('on');});if(same){ans.style.display='none';ans.dataset.k='';return;}q.insertAdjacentElement('afterend',ans);ans.innerHTML=A[q.dataset.a];ans.dataset.k=q.dataset.a;ans.style.display='block';q.classList.add('on');});});
@@ -148,8 +148,8 @@ I have worked on over 35 industry projects with clients including the World Bank
   document.getElementById('kcat-gpt').href='https://chatgpt.com/?q='+encodeURIComponent(prompt);
   document.getElementById('kcat-claude').href='https://claude.ai/new?q='+encodeURIComponent(prompt);
   document.getElementById('kcat-mail').href='mailto:'+['keegand','andrew.cmu.edu'].join('@');
-  setTimeout(function(){if(!root.classList.contains('open'))hi.classList.add('show');},2500);
-  setTimeout(function(){hi.classList.remove('show');},11000);
+  setTimeout(function(){if(!root.classList.contains('open'))hi.classList.add('show');},1200);
+  btn.addEventListener('mouseenter',function(){if(!root.classList.contains('open'))hi.classList.add('show');});
 })();
 </script>
 </body>
