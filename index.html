@@ -106,7 +106,10 @@ I have worked on over 35 industry projects with clients including the World Bank
     <div class="sub">Pick a question, ask an AI or send her a message.</div>
     <button class="q" data-a="plain">What does she actually do?</button>
     <button class="q" data-a="why">Why waste instead of oil?</button>
+    <button class="q" data-a="prove">What is she trying to prove?</button>
+    <button class="q" data-a="deadend">Isn't waste to fuels a dead end?</button>
     <button class="q" data-a="tool">What does her research tool do?</button>
+    <button class="q" data-a="math">Give me the technical version</button>
     <button class="q" data-a="past">What has she worked on before?</button>
     <div id="kcat-ans" aria-live="polite"></div>
     <div class="lbl">Ask an AI about her work</div>
@@ -128,7 +131,10 @@ I have worked on over 35 industry projects with clients including the World Bank
     plain:"Keegan is a chemical engineer who figures out how towns and cities could turn what they throw away, like sewage, landfill trash and factory exhaust, into the fuels, plastics, fertilizer and power they currently import. The goal is to cut pollution while lowering costs and creating local jobs.",
     why:"Oil and gas have to be found, drilled, shipped and refined, often far away and with a lot of damage along the way. Waste is already here, already collected and usually costs money to get rid of. Turning it into useful products keeps money and jobs local and cuts emissions at the same time.",
     tool:"Her research tool starts by mapping what a region actually has: wastewater plants, landfills, factories, roads and pipelines, all from public records. It then tests which ways of converting that waste would work physically, and compares them on cost, emissions, policy limits and local jobs. Allegheny County around Pittsburgh is the first test case.",
-    past:"Before grad school she spent over 8 years in industry: a hydrogen and clean fuel strategy for Durban, South Africa; a World Bank study on renewables and hydrogen for Chile's isolated grids; a national study on water for hydrogen in Australia; flood protection for New York City subway infrastructure and cost models for an electrolyzer startup."
+    prove:"That the place decides whether a plant works. Most waste to fuel projects are designed as generic plants and then dropped somewhere. She is testing whether designing from what a place already has, its waste, pipes, power, markets and rules, can reliably find the pathways that make sense and honestly show when none do.",
+    deadend:"A lot of people think so, because many projects have failed. Waste is messy and spread out, so collecting it is expensive, small plants lose economies of scale and high profile projects like Fulcrum BioEnergy's Nevada plant ended in bankruptcy. Her argument is that many of those failures came from one size fits all plants in the wrong places, not from the chemistry. A plant that sits next to its waste, shares existing infrastructure and sells into local markets faces very different economics.",
+    math:"Under the hood it is a superstructure optimization problem. From regional data the tool generates a graph of candidate routes: feeds, reactors, separations, recycles, utilities and products. Each route becomes a mixed integer nonlinear program, where binary variables choose units and connections and continuous variables carry flows, compositions, temperatures and duties, all subject to mass, species and energy balances. The objective is total annual cost, meaning annualized capital plus operating cost. Before the expensive solves, cheap lower bounds from structure, stoichiometry and thermodynamics prune any route whose best case cannot beat simply buying the product.",
+    past:"Before grad school she spent over 8 years in industry. She designed mechanical systems for Delta's new terminal at LaGuardia Airport and flood protection for New York City subway infrastructure, was lead analyst on a hydrogen and clean fuel strategy for Durban, South Africa, worked on a World Bank study of renewables and hydrogen for Chile's isolated grids and a national study on water for hydrogen in Australia and built the cost model for an electrolyzer startup."
   };
   var root=document.getElementById('kcat'),btn=document.getElementById('kcat-btn'),ans=document.getElementById('kcat-ans'),hi=document.getElementById('kcat-hi');
   function toggle(o){root.classList.toggle('open',o);btn.setAttribute('aria-expanded',o?'true':'false');}
