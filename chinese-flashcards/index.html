@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1c6a56">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="生词">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<title>Elementary Chinese Flashcards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC:wght@500&display=swap&text=%E2%BA%80%E4%B8%80%E4%B8%83%E4%B8%89%E4%B8%8A%E4%B8%8B%E4%B8%8D%E4%B8%93%E4%B8%9A%E4%B8%9C%E4%B8%9D%E4%B8%A4%E4%B8%AA%E4%B8%AD%E4%B8%BB%E4%B9%88%E4%B9%8C%E4%B9%90%E4%B9%9D%E4%B9%9F%E4%B9%A0%E4%B9%A6%E4%BA%86%E4%BA%8C%E4%BA%94%E4%BA%9A%E4%BA%9E%E4%BA%AC%E4%BA%BA%E4%BA%BB%E4%BB%80%E4%BB%8B%E4%BB%8E%E4%BB%96%E4%BB%AC%E4%BC%9A%E4%BD%93%E4%BD%9C%E4%BD%A0%E4%BE%86%E4%BF%84%E4%BF%A1%E4%BF%AE%E5%80%8B%E5%80%91%E5%81%9A%E5%84%BF%E5%85%84%E5%85%92%E5%85%94%E5%85%A9%E5%85%AB%E5%85%AC%E5%85%AD%E5%85%B0%E5%85%B4%E5%85%B9%E5%86%8D%E5%86%99%E5%87%A0%E5%88%80%E5%88%82%E5%88%A9%E5%89%B2%E5%8A%9F%E5%8A%A0%E5%8C%96%E5%8C%97%E5%8C%B9%E5%8C%BB%E5%8D%81%E5%8D%8E%E5%8D%B0%E5%8E%86%E5%8E%A8%E5%8F%8B%E5%8F%A3%E5%8F%AA%E5%8F%AB%E5%8F%AF%E5%8F%B0%E5%8F%B2%E5%90%8C%E5%90%8D%E5%90%97%E5%91%A2%E5%92%8C%E5%93%A5%E5%93%AA%E5%93%B2%E5%95%86%E5%95%8F%E5%96%9C%E5%97%8E%E5%9B%9B%E5%9B%BD%E5%9C%8B%E5%9C%9F%E5%9C%A8%E5%A0%A1%E5%A2%A8%E5%A3%AB%E5%A3%B0%E5%A4%96%E5%A4%9A%E5%A4%A7%E5%A4%AA%E5%A5%B3%E5%A5%B6%E5%A5%B9%E5%A5%BD%E5%A6%87%E5%A6%88%E5%A6%B9%E5%A7%90%E5%A7%93%E5%A9%86%E5%A9%A6%E5%AA%BD%E5%AD%90%E5%AD%97%E5%AD%A6%E5%AD%A9%E5%AD%B8%E5%AE%80%E5%AE%A0%E5%AE%A2%E5%AE%A4%E5%AE%B6%E5%AE%B9%E5%AF%93%E5%AF%AB%E5%AF%B5%E5%AF%B9%E5%B0%88%E5%B0%8D%E5%B0%91%E5%B0%94%E5%B1%9E%E5%B1%AC%E5%B1%B1%E5%B7%A5%E5%B8%88%E5%B8%AB%E5%B8%B8%E5%B9%BE%E5%BA%A6%E5%BA%AD%E5%BB%9A%E5%BB%BA%E5%BC%80%E5%BC%9F%E5%BE%88%E5%BE%8B%E5%BE%9E%E5%BE%B7%E5%BF%83%E5%BF%99%E5%BF%B5%E6%80%8E%E6%81%AF%E6%82%A8%E6%84%8F%E6%84%9B%E6%87%82%E6%88%91%E6%89%8B%E6%89%8C%E6%89%93%E6%8A%A4%E6%8B%94%E6%8B%BF%E6%8E%88%E6%95%99%E6%95%B0%E6%95%B8%E6%96%87%E6%96%AF%E6%97%A5%E6%98%93%E6%98%AF%E6%9B%B8%E6%9C%83%E6%9C%88%E6%9C%89%E6%9C%8B%E6%9C%A8%E6%9C%AC%E6%9C%AF%E6%9C%BA%E6%9D%89%E6%9D%A1%E6%9D%A5%E6%9D%B1%E6%A2%9D%E6%A5%AD%E6%A8%82%E6%A9%9F%E6%AC%A2%E6%AD%A1%E6%AD%B7%E6%B0%94%E6%B0%A3%E6%B0%B4%E6%B0%B5%E6%B2%92%E6%B2%A1%E6%B3%95%E6%B4%9B%E6%B5%8E%E6%B5%B7%E6%B8%AF%E6%BC%94%E6%BE%B3%E6%BF%9F%E7%81%AB%E7%81%AC%E7%82%B9%E7%83%8F%E7%85%8E%E7%86%8A%E7%88%B1%E7%88%B7%E7%88%B8%E7%88%BA%E7%88%BE%E7%89%99%E7%89%A9%E7%8B%97%E7%8C%AA%E7%8C%AB%E7%8E%89%E7%8F%AD%E7%90%86%E7%94%9F%E7%94%B5%E7%94%B7%E7%9A%84%E7%9B%9B%E7%9B%AE%E7%9C%8B%E7%9D%A1%E7%9F%B6%E7%A0%94%E7%A3%AF%E7%A4%BB%E7%A4%BE%E7%A5%9E%E7%A8%8B%E7%A9%B6%E7%AC%AC%E7%AD%91%E7%AE%80%E7%AE%97%E7%AF%89%E7%B3%BB%E7%B4%84%E7%B4%90%E7%B4%AF%E7%B4%B9%E7%B5%B2%E7%B6%93%E7%B7%B4%E7%B9%81%E7%BA%A6%E7%BA%BD%E7%BB%83%E7%BB%8D%E7%BB%8F%E7%BD%97%E7%BE%85%E7%BE%8E%E7%BE%A9%E7%BF%92%E8%80%81%E8%80%83%E8%80%B3%E8%81%B2%E8%84%91%E8%85%A6%E8%87%BA%E8%88%88%E8%89%BA%E8%8A%9D%E8%8B%B1%E8%8C%B2%E8%8D%B7%E8%8F%AF%E8%97%9D%E8%98%AD%E8%9B%87%E8%9C%A5%E8%9C%B4%E8%A1%93%E8%A1%A4%E8%A1%A8%E8%A1%AB%E8%A3%94%E8%A3%A1%E8%A5%BF%E8%A6%8B%E8%A6%96%E8%A6%BA%E8%A7%81%E8%A7%86%E8%A7%89%E8%A8%80%E8%A8%88%E8%A9%9E%E8%A9%A6%E8%AA%8D%E8%AA%9E%E8%AA%AA%E8%AA%B0%E8%AA%B2%E8%AB%8B%E8%AC%9D%E8%AD%98%E8%AD%B7%E8%AE%A1%E8%AE%A4%E8%AF%86%E8%AF%8D%E8%AF%95%E8%AF%AD%E8%AF%B4%E8%AF%B7%E8%AF%BE%E8%B0%81%E8%B0%A2%E8%B1%AC%E8%B2%93%E8%B2%B4%E8%B4%B5%E8%B6%B3%E8%B7%9F%E8%BB%8A%E8%BC%94%E8%BC%95%E8%BC%9B%E8%BD%A6%E8%BD%BB%E8%BE%85%E8%BE%86%E8%BF%98%E8%BF%99%E9%80%99%E9%81%8D%E9%82%84%E9%82%A3%E9%83%BD%E9%86%AB%E9%87%8C%E9%87%91%E9%87%92%E9%8C%A2%E9%8C%AF%E9%92%85%E9%92%89%E9%92%B1%E9%94%99%E9%96%80%E9%96%8B%E9%97%A8%E9%97%AE%E9%99%85%E9%9A%9B%E9%9A%BB%E9%9A%BE%E9%9B%9E%E9%9B%A3%E9%9B%A8%E9%9B%BB%E9%9F%93%E9%9F%A9%E9%9F%B3%E9%A0%81%E9%A0%93%E9%A1%8C%E9%A1%B5%E9%A1%BF%E9%A2%98%E9%A3%A0%E9%A5%A3%E9%A5%B1%E9%A6%96%E9%A6%99%E9%A6%AC%E9%A9%AC%E9%AB%94%E9%AB%98%E9%AD%9A%E9%B1%BC%E9%B3%A5%E9%B5%A1%E9%B8%9A%E9%B8%9F%E9%B8%A1%E9%B9%89%E9%B9%A6%E9%BA%BC%E9%BB%9E%E9%BE%9C%E9%BE%9F%E9%BF%BF">
+<style>
+/* Layout: one study column; deck chips and settings above, a practice-paper card in the middle, a word list below */
+:root {
+  --paper: #f4f7f5;
+  --surface: #ffffff;
+  --ink: #18211e;
+  --muted: #5a6964;
+  --line: #d6dfdb;
+  --accent: #1c6a56;
+  --accent-ink: #ffffff;
+  --accent-soft: #e2efe9;
+  --grid: #e2a49c;
+  --again: #a9442d;
+  --again-soft: #f6e5e0;
+  --f-hanzi-s: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  --f-hanzi-t: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --f-serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --f-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111715; --surface: #18201d; --ink: #e6ece9; --muted: #98a7a1; --line: #2a3531;
+    --accent: #62c3a3; --accent-ink: #0c1311; --accent-soft: #1d3029; --grid: #7a3f39;
+    --again: #e88a73; --again-soft: #3a221d; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111715; --surface: #18201d; --ink: #e6ece9; --muted: #98a7a1; --line: #2a3531;
+  --accent: #62c3a3; --accent-ink: #0c1311; --accent-soft: #1d3029; --grid: #7a3f39;
+  --again: #e88a73; --again-soft: #3a221d; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-ui); font-size: 15px; line-height: 1.45; }
+.wrap { max-width: 42rem; margin: 0 auto; padding-inline: 16px; padding-block: 1rem 3rem; display: flex; flex-direction: column; gap: 1rem; }
+header { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+.eyebrow { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+h1 { margin: .1rem 0 0; font-family: var(--f-serif); font-weight: 600; font-size: 1.55rem; line-height: 1.15; text-wrap: balance; }
+h1 .hz { font-family: var(--f-hanzi-s); font-weight: 500; margin-right: .35rem; }
+.count { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chip { font: inherit; font-size: .85rem; padding: .35rem .7rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; display: inline-flex; gap: .35rem; align-items: baseline; }
+.chip small { color: var(--muted); font-size: .75rem; font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.chip[aria-pressed="true"] small { color: inherit; opacity: .8; }
+.chip:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.settings { display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: center; font-size: .82rem; color: var(--muted); }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { font: inherit; font-size: .82rem; border: 0; background: none; color: var(--ink); padding: .3rem .6rem; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.seg .hzb { font-family: var(--f-hanzi-s); }
+.seg .hzb.t { font-family: var(--f-hanzi-t); }
+.toggle { display: inline-flex; align-items: center; gap: .35rem; cursor: pointer; }
+.toggle input { accent-color: var(--accent); }
+.linkbtn { font: inherit; font-size: .82rem; background: none; border: 0; color: var(--accent); cursor: pointer; padding: .3rem 0; text-decoration: underline; text-underline-offset: 3px; }
+
+.progress { display: flex; align-items: center; gap: .6rem; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bar { flex: 1; height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .25s ease; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.25rem 1rem 1rem; min-height: 21rem; display: flex; flex-direction: column; gap: 1rem; cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+.card-top { display: flex; justify-content: space-between; align-items: center; font-size: .75rem; color: var(--muted); }
+.tag { letter-spacing: .06em; text-transform: uppercase; font-weight: 500; }
+.tag .extra { margin-left: .4rem; padding: .05rem .4rem; border-radius: 4px; border: 1px solid var(--line); text-transform: none; letter-spacing: 0; }
+.prompt { flex: 1; display: grid; place-items: center; min-height: 9rem; }
+.big-text { font-family: var(--f-serif); font-size: clamp(1.6rem, 6vw, 2.4rem); text-align: center; text-wrap: balance; line-height: 1.2; }
+.big-text.py { font-style: italic; }
+
+.tiles { display: flex; justify-content: center; gap: .35rem; width: 100%; }
+.tile { flex: 0 1 7.5rem; min-width: 0; aspect-ratio: 1; max-width: 100%; position: relative; border: 1.5px solid var(--grid); container-type: inline-size; display: grid; place-items: center; }
+.tile::before, .tile::after { content: ""; position: absolute; border: 0 dashed var(--grid); }
+.tile::before { left: 50%; top: 0; bottom: 0; border-left-width: 1px; }
+.tile::after { top: 50%; left: 0; right: 0; border-top-width: 1px; }
+.tile span { position: relative; z-index: 1; font-family: var(--f-hanzi-s); font-weight: 500; font-size: 74cqi; line-height: 1; }
+.tiles.t .tile span { font-family: var(--f-hanzi-t); }
+.tiles.small { justify-content: flex-start; }
+.tiles.small .tile { flex-basis: 3.4rem; }
+.tile.punct { border-color: transparent; }
+.tile.punct::before, .tile.punct::after { display: none; }
+
+.answer { border-top: 1px solid var(--line); padding-top: .9rem; display: grid; gap: .55rem; }
+.answer .py { font-family: var(--f-serif); font-style: italic; font-size: 1.45rem; }
+.answer .en { font-family: var(--f-serif); font-size: 1.15rem; }
+.answer .alt { font-size: .85rem; color: var(--muted); }
+.answer .alt b { font-family: var(--f-hanzi-t); font-weight: 500; color: var(--ink); font-size: 1.1rem; }
+.answer .alt b.s { font-family: var(--f-hanzi-s); }
+.ans-row { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
+.speak { font: inherit; font-size: .8rem; border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: 999px; padding: .25rem .65rem; cursor: pointer; display: inline-flex; align-items: center; gap: .3rem; }
+.speak svg { width: 14px; height: 14px; fill: currentColor; }
+.hint { font-size: .8rem; color: var(--muted); text-align: center; }
+
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+.btn { font: inherit; font-size: 1rem; font-weight: 600; padding: .8rem 1rem; border-radius: 10px; border: 1px solid transparent; cursor: pointer; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); grid-column: 1 / -1; }
+.btn.good { background: var(--accent); color: var(--accent-ink); }
+.btn.again { background: var(--again-soft); color: var(--again); border-color: var(--again); }
+.btn.ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.btn small { display: block; font-weight: 400; font-size: .72rem; opacity: .8; }
+.keys { font-size: .75rem; color: var(--muted); text-align: center; }
+@media (hover: none) { .keys { display: none; } }
+
+.done { flex: 1; display: grid; place-items: center; text-align: center; gap: .4rem; cursor: default; }
+.done h2 { font-family: var(--f-serif); font-weight: 600; margin: 0; font-size: 1.5rem; }
+.done p { margin: 0; color: var(--muted); }
+
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+summary { cursor: pointer; padding: .75rem 1rem; font-weight: 500; }
+.list-wrap { overflow-x: auto; padding: 0 1rem 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+td, th { text-align: left; padding: .45rem .5rem; border-top: 1px solid var(--line); vertical-align: baseline; }
+th { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 500; border-top: 0; }
+td.hz { font-family: var(--f-hanzi-s); font-size: 1.15rem; white-space: nowrap; }
+td.hz .t { font-family: var(--f-hanzi-t); color: var(--muted); font-size: .95rem; margin-left: .3rem; }
+td.py { font-family: var(--f-serif); font-style: italic; white-space: nowrap; }
+td.k { color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.reset-row { display: flex; gap: .75rem; align-items: center; padding-top: .75rem; flex-wrap: wrap; font-size: .82rem; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">82-131 Elementary Chinese I</div>
+      <h1><span class="hz">生词</span>Flashcards</h1>
+    </div>
+    <div class="count" id="count"></div>
+  </header>
+
+  <div class="chips" id="chips" role="group" aria-label="Lessons to study"></div>
+
+  <div class="settings">
+    <span>Show first
+      <span class="seg" id="seg-front">
+        <button type="button" data-v="char">Characters</button>
+        <button type="button" data-v="pinyin">Pinyin</button>
+        <button type="button" data-v="english">English</button>
+      </span>
+    </span>
+    <span class="seg" id="seg-script" aria-label="Character set">
+      <button type="button" data-v="s" class="hzb">简体</button>
+      <button type="button" data-v="t" class="hzb t">繁體</button>
+    </span>
+    <label class="toggle"><input type="checkbox" id="extras"> Include extra words</label>
+    <button type="button" class="linkbtn" id="restart">Shuffle and restart</button>
+  </div>
+
+  <div class="progress"><span id="prog-text"></span><div class="bar"><i id="prog-bar"></i></div></div>
+
+  <div class="card" id="card" tabindex="0" aria-live="polite"></div>
+  <div class="actions" id="actions"></div>
+  <div class="keys">Space shows the answer · 1 again · 2 got it · S plays audio</div>
+
+  <details id="list">
+    <summary id="list-summary">Word list</summary>
+    <div class="list-wrap">
+      <table><thead><tr><th>Characters</th><th>Pinyin</th><th>Meaning</th><th>Known</th></tr></thead><tbody id="list-body"></tbody></table>
+      <div class="reset-row">
+        <span>Progress is saved in this browser only.</span>
+        <button type="button" class="linkbtn" id="reset">Reset progress</button>
+      </div>
+    </div>
+  </details>
+</div>
+
+<script>
+// Card format: [simplified, traditional ("" if same), pinyin, English, extra]
+// extra = 1 for words shown in class slides but not on the lesson's core vocabulary list
+const DECKS = [
+  { id: "L1", name: "Lesson 1", cards: [
+    ["你","","nǐ","you"],
+    ["好","","hǎo","good, well"],
+    ["是","","shì","to be (am, is, are)"],
+    ["学生","學生","xuésheng","student"],
+    ["中文","","Zhōngwén","Chinese (language)"],
+    ["学","學","xué","to study, to learn"],
+    ["吗","嗎","ma","question particle (yes/no questions)"],
+    ["呢","","ne","question particle: how about…?"],
+    ["我","","wǒ","I, me"],
+    ["也","","yě","also, too"],
+    ["他","","tā","he, him"],
+    ["不","","bù","not, no"],
+    ["老师","老師","lǎoshī","teacher"],
+    ["她","","tā","she, her"],
+    ["教授","","jiàoshòu","professor"],
+    ["不错","不錯","búcuò","not bad, pretty good",1]
+  ]},
+  { id: "L2", name: "Lesson 2", cards: [
+    ["您","","nín","you (polite)"],
+    ["贵","貴","guì","honorable; expensive"],
+    ["姓","","xìng","surname; to be surnamed"],
+    ["贵姓","貴姓","guìxìng","(your) honorable surname"],
+    ["请问","請問","qǐngwèn","may I ask…"],
+    ["的","","de","possessive particle ('s)"],
+    ["英文","","Yīngwén","English (language)"],
+    ["名字","","míngzi","name"],
+    ["叫","","jiào","to be called; to call"],
+    ["什么","什麼","shénme","what"],
+    ["谁","誰","shéi","who, whom"],
+    ["同学","同學","tóngxué","classmate"]
+  ]},
+  { id: "L3", name: "Lesson 3", cards: [
+    ["哪","","nǎ","which"],
+    ["国","國","guó","country"],
+    ["人","","rén","person, people"],
+    ["哪国人","哪國人","nǎ guó rén","what nationality?"],
+    ["很","","hěn","very"],
+    ["对","對","duì","correct, right"],
+    ["对了","對了","duì le","by the way"],
+    ["法国","法國","Fǎguó","France"],
+    ["美国","美國","Měiguó","United States"],
+    ["英国","英國","Yīngguó","Britain"],
+    ["中国","中國","Zhōngguó","China"],
+    ["说","說","shuō","to speak, to say"],
+    ["会","會","huì","can, to know how to"],
+    ["一点儿","一點兒","yìdiǎnr","a little (before a noun)"],
+    ["德国","德國","Déguó","Germany"],
+    ["韩国","韓國","Hánguó","South Korea"],
+    ["加拿大","","Jiānádà","Canada"],
+    ["墨西哥","","Mòxīgē","Mexico"],
+    ["日本","","Rìběn","Japan"],
+    ["西班牙","","Xībānyá","Spain"],
+    ["和","","hé","and (between nouns)"],
+    ["语言","語言","yǔyán","language"],
+    ["法文","","Fǎwén","French (language)"],
+    ["日文","","Rìwén","Japanese (language)"],
+    ["德文","","Déwén","German (language)"],
+    ["西班牙文","","Xībānyáwén","Spanish (language)"],
+    ["印度","","Yìndù","India",1],
+    ["意大利","義大利","Yìdàlì","Italy",1],
+    ["澳大利亚","澳大利亞","Àodàlìyà","Australia",1],
+    ["俄罗斯","俄羅斯","Éluósī","Russia",1],
+    ["华裔","華裔","huáyì","of Chinese descent",1],
+    ["哪里","哪裡","nǎlǐ","where",1],
+    ["纽约","紐約","Niǔyuē","New York",1],
+    ["芝加哥","","Zhījiāgē","Chicago",1],
+    ["洛杉矶","洛杉磯","Luòshānjī","Los Angeles",1],
+    ["华盛顿","華盛頓","Huáshèngdùn","Washington",1],
+    ["匹兹堡","匹茲堡","Pǐzībǎo","Pittsburgh",1],
+    ["北京","","Běijīng","Beijing",1],
+    ["上海","","Shànghǎi","Shanghai",1],
+    ["首尔","首爾","Shǒu'ěr","Seoul",1],
+    ["东京","東京","Dōngjīng","Tokyo",1],
+    ["香港","","Xiānggǎng","Hong Kong",1],
+    ["台北","臺北","Táiběi","Taipei",1],
+    ["朋友","","péngyou","friend",1]
+  ]},
+  { id: "L4", name: "Lesson 4", cards: [
+    ["那","","nà","that"],
+    ["这","這","zhè","this"],
+    ["本","","běn","measure word for books"],
+    ["书","書","shū","book"],
+    ["文学","文學","wénxué","literature"],
+    ["工程","","gōngchéng","engineering"],
+    ["难","難","nán","difficult"],
+    ["太","","tài","too, extremely"],
+    ["可是","","kěshì","but"],
+    ["功课","功課","gōngkè","homework, schoolwork"],
+    ["多","","duō","many, much"],
+    ["少","","shǎo","few, little"],
+    ["我们","我們","wǒmen","we, us"],
+    ["们","們","men","plural suffix for people"],
+    ["容易","","róngyì","easy"],
+    ["大学生","大學生","dàxuéshēng","college student"],
+    ["系","","xì","department (of a university)"],
+    ["数学","數學","shùxué","mathematics"],
+    ["计算机","計算機","jìsuànjī","computer (computer science)"],
+    ["电脑","電腦","diànnǎo","computer"],
+    ["专业","專業","zhuānyè","major (field of study)"],
+    ["主修","","zhǔxiū","major; to major in"],
+    ["辅修","輔修","fǔxiū","minor; to minor in"],
+    ["忙","","máng","busy"],
+    ["累","","lèi","tired"],
+    ["作业","作業","zuòyè","homework"],
+    ["考试","考試","kǎoshì","test, exam"],
+    ["还好","還好","hái hǎo","okay, not bad"],
+    ["有点儿","有點兒","yǒudiǎnr","a little, somewhat (before adjectives)"],
+    ["喜欢","喜歡","xǐhuan","to like",1],
+    ["社会学","社會學","shèhuìxué","sociology",1],
+    ["生物学","生物學","shēngwùxué","biology",1],
+    ["化学","化學","huàxué","chemistry",1],
+    ["物理","","wùlǐ","physics",1],
+    ["商学","商學","shāngxué","business",1],
+    ["法学","法學","fǎxué","law",1],
+    ["医学","醫學","yīxué","medicine",1],
+    ["国际研究","國際研究","guójì yánjiū","global studies",1],
+    ["音乐","音樂","yīnyuè","music",1],
+    ["艺术","藝術","yìshù","art",1],
+    ["建筑","建築","jiànzhù","architecture",1],
+    ["历史","歷史","lìshǐ","history",1],
+    ["哲学","哲學","zhéxué","philosophy",1],
+    ["经济学","經濟學","jīngjìxué","economics",1],
+    ["心理学","心理學","xīnlǐxué","psychology",1],
+    ["信息工程","","xìnxī gōngchéng","information technology",1],
+    ["语言学","語言學","yǔyánxué","linguistics",1]
+  ]},
+  { id: "L5", name: "Lesson 5", cards: [
+    ["朋友","","péngyou","friend"],
+    ["来","來","lái","to come"],
+    ["介绍","介紹","jièshào","to introduce"],
+    ["一下","","yíxià","a bit (softens a verb)"],
+    ["室友","","shìyǒu","roommate"],
+    ["有","","yǒu","to have"],
+    ["个","個","gè","general measure word"],
+    ["几","幾","jǐ","how many (usually under ten)"],
+    ["两","兩","liǎng","two (before a measure word)"],
+    ["都","","dōu","all, both"],
+    ["常","","cháng","often"],
+    ["跟","","gēn","with"],
+    ["没有","沒有","méiyǒu","to not have"],
+    ["女朋友","","nǚpéngyou","girlfriend"],
+    ["男朋友","","nánpéngyou","boyfriend"],
+    ["认识","認識","rènshi","to know (a person), to recognize"],
+    ["钱","錢","qián","money",1],
+    ["好朋友","","hǎo péngyou","good friend",1],
+    ["你属什么","你屬什麼","nǐ shǔ shénme","what is your zodiac animal?",1]
+  ]},
+  { id: "L6", name: "Lesson 6", cards: [
+    ["家","","jiā","family, home"],
+    ["大家","","dàjiā","everyone"],
+    ["从","從","cóng","from"],
+    ["在","","zài","at, in; to be located at"],
+    ["爸爸","","bàba","dad"],
+    ["妈妈","媽媽","māma","mom"],
+    ["姐姐","","jiějie","older sister"],
+    ["哥哥","","gēge","older brother"],
+    ["妹妹","","mèimei","younger sister"],
+    ["弟弟","","dìdi","younger brother"],
+    ["兄弟姐妹","","xiōngdì jiěmèi","siblings"],
+    ["孩子","","háizi","child"],
+    ["工作","","gōngzuò","to work; job"],
+    ["男","","nán","male"],
+    ["女","","nǚ","female"],
+    ["辆","輛","liàng","measure word for vehicles"],
+    ["车","車","chē","car, vehicle"],
+    ["只","隻","zhī","measure word for animals"],
+    ["狗","","gǒu","dog"],
+    ["猫","貓","māo","cat"],
+    ["宠物","寵物","chǒngwù","pet"],
+    ["爱","愛","ài","to love"],
+    ["工程师","工程師","gōngchéngshī","engineer"],
+    ["爷爷","爺爺","yéye","grandpa (father's father)"],
+    ["奶奶","","nǎinai","grandma (father's mother)"],
+    ["外公","","wàigōng","grandpa (mother's father)"],
+    ["外婆","","wàipó","grandma (mother's mother)"],
+    ["商人","","shāngrén","businessperson"],
+    ["医生","醫生","yīshēng","doctor"],
+    ["护士","護士","hùshi","nurse"],
+    ["律师","律師","lǜshī","lawyer"],
+    ["厨师","廚師","chúshī","chef"],
+    ["家庭主妇","家庭主婦","jiātíng zhǔfù","homemaker, housewife"],
+    ["纽约","紐約","Niǔyuē","New York"],
+    ["做","","zuò","to do, to make"],
+    ["哪儿","哪兒","nǎr","where"],
+    ["写作业","寫作業","xiě zuòyè","to do homework",1],
+    ["看电视","看電視","kàn diànshì","to watch TV",1],
+    ["睡觉","睡覺","shuìjiào","to sleep",1],
+    ["猪","豬","zhū","pig",1],
+    ["鸡","雞","jī","chicken",1],
+    ["鱼","魚","yú","fish",1],
+    ["马","馬","mǎ","horse",1],
+    ["兔子","","tùzi","rabbit",1],
+    ["蛇","","shé","snake",1],
+    ["鸟","鳥","niǎo","bird",1],
+    ["鹦鹉","鸚鵡","yīngwǔ","parrot",1],
+    ["乌龟","烏龜","wūguī","turtle",1],
+    ["金丝熊","金絲熊","jīnsīxióng","hamster",1],
+    ["荷兰猪","荷蘭豬","hélánzhū","guinea pig",1],
+    ["蜥蜴","","xīyì","lizard",1],
+    ["条","條","tiáo","measure word for long things (fish, snakes)",1],
+    ["匹","","pǐ","measure word for horses",1]
+  ]},
+  { id: "CE", name: "Classroom", cards: [
+    ["大家好","","dàjiā hǎo","hello, everyone"],
+    ["同学们好","同學們好","tóngxuémen hǎo","hello, students"],
+    ["老师好","老師好","lǎoshī hǎo","hello, teacher"],
+    ["上课","上課","shàng kè","class begins"],
+    ["下课","下課","xià kè","class is dismissed"],
+    ["请跟我说","請跟我說","qǐng gēn wǒ shuō","please repeat after me"],
+    ["不对","不對","bú duì","incorrect"],
+    ["很好","","hěn hǎo","very good"],
+    ["谢谢","謝謝","xièxie","thank you"],
+    ["不客气","不客氣","bú kèqi","you're welcome"],
+    ["再见","再見","zàijiàn","goodbye"],
+    ["请你再说一遍","請你再說一遍","qǐng nǐ zài shuō yí biàn","please say it again"],
+    ["中文怎么说","中文怎麼說","Zhōngwén zěnme shuō","how do you say it in Chinese?"],
+    ["英文怎么说","英文怎麼說","Yīngwén zěnme shuō","how do you say it in English?"],
+    ["请打开书","請打開書","qǐng dǎkāi shū","please open your book"],
+    ["请看第一页","請看第一頁","qǐng kàn dì yī yè","please look at page 1"],
+    ["请看第一题","請看第一題","qǐng kàn dì yī tí","please look at question 1"],
+    ["请念课文","請念課文","qǐng niàn kèwén","please read the text"],
+    ["请跟我念","請跟我念","qǐng gēn wǒ niàn","please read aloud after me"],
+    ["请你写","請你寫","qǐng nǐ xiě","please write"],
+    ["懂了吗","懂了嗎","dǒng le ma","do you understand?"],
+    ["懂了","","dǒng le","I understand"],
+    ["不懂","","bù dǒng","I don't understand"],
+    ["有问题吗","有問題嗎","yǒu wèntí ma","any questions?"],
+    ["我有问题","我有問題","wǒ yǒu wèntí","I have a question"],
+    ["没有问题","沒有問題","méiyǒu wèntí","no questions"],
+    ["练习练习","練習練習","liànxi liànxi","practice a bit"],
+    ["表演","","biǎoyǎn","act out, perform"],
+    ["生词","生詞","shēngcí","vocabulary"],
+    ["生词考试","生詞考試","shēngcí kǎoshì","vocabulary test"],
+    ["第一声","第一聲","dì yī shēng","first tone"],
+    ["第二声","第二聲","dì èr shēng","second tone"],
+    ["第三声","第三聲","dì sān shēng","third tone"],
+    ["第四声","第四聲","dì sì shēng","fourth tone"],
+    ["轻声","輕聲","qīngshēng","neutral tone"],
+    ["第几声","第幾聲","dì jǐ shēng","which tone?"]
+  ]},
+  { id: "PF", name: "Pinyin Foundation", cards: [
+    ["你好","","nǐ hǎo","hello"],
+    ["你们好","你們好","nǐmen hǎo","hello (to several people)"],
+    ["我叫…","","wǒ jiào…","my name is…"],
+    ["你叫什么","你叫什麼","nǐ jiào shénme","what is your name?"],
+    ["很高兴认识你","很高興認識你","hěn gāoxìng rènshi nǐ","nice to meet you"],
+    ["很高兴认识你们","很高興認識你們","hěn gāoxìng rènshi nǐmen","nice to meet you all"]
+  ]},
+  { id: "NUM", name: "Numbers", cards: [
+    ["一","","yī","one"],["二","","èr","two"],["三","","sān","three"],["四","","sì","four"],["五","","wǔ","five"],
+    ["六","","liù","six"],["七","","qī","seven"],["八","","bā","eight"],["九","","jiǔ","nine"],["十","","shí","ten"]
+  ]},
+  { id: "RAD", name: "Radicals", cards: [
+    ["心","","xīn","heart"],["耳","","ěr","ear"],["目","","mù","eye"],["手","","shǒu","hand"],
+    ["鱼","魚","yú","fish"],["马","馬","mǎ","horse"],["车","車","chē","vehicle"],["子","","zǐ","child"],
+    ["刀","","dāo","knife"],["足","","zú","foot"],["金","","jīn","metal, gold"],["玉","","yù","jade"],
+    ["人","","rén","person"],["口","","kǒu","mouth"],["山","","shān","mountain"],["水","","shuǐ","water"],
+    ["日","","rì","sun, day"],["月","","yuè","moon, month"],["土","","tǔ","earth, soil"],["木","","mù","wood, tree"],
+    ["雨","","yǔ","rain"],["火","","huǒ","fire"],["女","","nǚ","woman"],["门","門","mén","door"],
+    ["亻","","rén","person (side form of 人), as in 信",1],
+    ["氵","","shuǐ","water (side form of 水), as in 海",1],
+    ["扌","","shǒu","hand (side form of 手), as in 拔",1],
+    ["灬","","huǒ","fire (bottom form of 火), as in 煎",1],
+    ["刂","","dāo","knife (side form of 刀), as in 割",1],
+    ["钅","釒","jīn","metal (side form of 金), as in 钉",1],
+    ["饣","飠","shí","food, as in 饱",1],
+    ["衤","","yī","clothing, as in 衫",1],
+    ["礻","","shì","spirit, altar, as in 神",1],
+    ["宀","","mián","roof, as in 寓",1]
+  ]}
+];
+// When several decks are selected, a word that appears in more than one is shown once, from the first deck in this order
+const PRIORITY = ["L1","L2","L3","L4","L5","L6","CE","PF","NUM","RAD"];
+
+const store = {
+  get(k, d) { try { const v = localStorage.getItem("zh-fc:" + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem("zh-fc:" + k, JSON.stringify(v)); } catch (e) {} }
+};
+const prefs = Object.assign({ decks: ["L6"], front: "char", script: "s", extras: true }, store.get("prefs", {}));
+let known = store.get("known", {});
+const deckById = Object.fromEntries(DECKS.map(d => [d.id, d]));
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+let session = { queue: [], total: 0, done: 0, missed: [], current: null, revealed: false };
+
+function cardObj(deck, a) { return { deck: deck.id, deckName: deck.name, s: a[0], t: a[1] || a[0], p: a[2], e: a[3], x: !!a[4], key: deck.id + "|" + a[0] }; }
+
+function pool() {
+  const seen = new Set(), out = [];
+  for (const id of PRIORITY) {
+    if (!prefs.decks.includes(id)) continue;
+    for (const a of deckById[id].cards) {
+      if (a[4] && !prefs.extras) continue;
+      if (seen.has(a[0])) continue;
+      seen.add(a[0]); out.push(cardObj(deckById[id], a));
+    }
+  }
+  return out;
+}
+
+function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+
+function start(cards) {
+  // Words you have marked known fewer times come up first, and core lesson words before extras
+  const q = shuffle(cards.slice()).sort((a, b) => ((known[a.key] || 0) - (known[b.key] || 0)) || (a.x - b.x));
+  session = { queue: q, total: q.length, done: 0, missed: [], current: null, revealed: false };
+  next();
+}
+
+function next() {
+  session.current = session.queue.shift() || null;
+  session.revealed = false;
+  render();
+}
+
+function again() {
+  const c = session.current; if (!c) return;
+  if (!session.missed.some(m => m.key === c.key)) session.missed.push(c);
+  known[c.key] = 0; store.set("known", known);
+  session.queue.splice(Math.min(4, session.queue.length), 0, c);
+  next();
+}
+
+function gotIt() {
+  const c = session.current; if (!c) return;
+  known[c.key] = (known[c.key] || 0) + 1; store.set("known", known);
+  session.done++;
+  next();
+}
+
+function reveal() { if (session.current && !session.revealed) { session.revealed = true; render(); } }
+
+function tiles(text, script, small) {
+  const chars = Array.from(text);
+  return `<div class="tiles${script === "t" ? " t" : ""}${small ? " small" : ""}">` +
+    chars.map(ch => /[⺀-鿿\u{20000}-\u{2FFFF}]/u.test(ch)
+      ? `<div class="tile"><span>${esc(ch)}</span></div>`
+      : `<div class="tile punct"><span>${esc(ch)}</span></div>`).join("") + `</div>`;
+}
+
+const hasSpeech = "speechSynthesis" in window;
+function speak(text) {
+  if (!hasSpeech) return;
+  try {
+    const u = new SpeechSynthesisUtterance(text.replace(/…/g, ""));
+    u.lang = "zh-CN"; u.rate = 0.8;
+    const v = speechSynthesis.getVoices().find(v => /^zh[-_](CN|Hans)/i.test(v.lang)) || speechSynthesis.getVoices().find(v => /^zh/i.test(v.lang));
+    if (v) u.voice = v;
+    speechSynthesis.cancel(); speechSynthesis.speak(u);
+  } catch (e) {}
+}
+const speakerIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>';
+
+function render() {
+  const c = session.current, card = $("card"), actions = $("actions");
+  const pct = session.total ? Math.round(100 * session.done / session.total) : 0;
+  $("prog-text").textContent = session.total ? `${session.done} of ${session.total} learned` : "";
+  $("prog-bar").style.width = pct + "%";
+
+  if (!session.total) {
+    card.innerHTML = `<div class="done"><div><h2>No words selected</h2><p>Pick one or more lessons above to start.</p></div></div>`;
+    actions.innerHTML = ""; return;
+  }
+  if (!c) {
+    const m = session.missed.length;
+    card.innerHTML = `<div class="done"><div><h2>Done with this round</h2><p>${session.total} words · ${m ? m + " needed another look" : "every word on the first try"}</p></div></div>`;
+    actions.innerHTML = (m ? `<button class="btn again" id="b-missed">Review the ${m} missed</button>` : "") +
+      `<button class="btn ghost" id="b-restart"${m ? "" : ' style="grid-column:1/-1"'}>Study all again</button>`;
+    if (m) $("b-missed").onclick = () => start(session.missed);
+    $("b-restart").onclick = () => start(pool());
+    return;
+  }
+
+  const hz = prefs.script === "t" ? c.t : c.s;
+  let prompt;
+  if (prefs.front === "char") prompt = tiles(hz, prefs.script);
+  else if (prefs.front === "pinyin") prompt = `<div class="big-text py">${esc(c.p)}</div>`;
+  else prompt = `<div class="big-text">${esc(c.e)}</div>`;
+
+  let answer = "";
+  if (session.revealed) {
+    const other = prefs.script === "t" ? c.s : c.t;
+    const otherLabel = prefs.script === "t" ? "Simplified" : "Traditional";
+    answer = `<div class="answer">` +
+      (prefs.front !== "char" ? tiles(hz, prefs.script, true) : "") +
+      `<div class="ans-row">${prefs.front !== "pinyin" ? `<span class="py">${esc(c.p)}</span>` : ""}` +
+      (hasSpeech ? `<button type="button" class="speak" id="b-speak">${speakerIcon} Listen</button>` : "") + `</div>` +
+      (prefs.front !== "english" ? `<div class="en">${esc(c.e)}</div>` : "") +
+      (other !== hz ? `<div class="alt">${otherLabel} <b class="${prefs.script === "t" ? "s" : ""}">${esc(other)}</b></div>` : "") +
+      `</div>`;
+  }
+  card.innerHTML = `<div class="card-top"><span class="tag">${esc(c.deckName)}${c.x ? '<span class="extra">extra</span>' : ""}</span><span>${session.queue.length} left in queue</span></div>` +
+    `<div class="prompt">${prompt}</div>` + (answer || `<div class="hint">Tap the card to show the answer</div>`);
+  const sb = $("b-speak");
+  if (sb) sb.onclick = ev => { ev.stopPropagation(); speak(c.s); };
+
+  actions.innerHTML = session.revealed
+    ? `<button class="btn again" id="b-again">Again<small>see it again soon</small></button><button class="btn good" id="b-good">Got it<small>next word</small></button>`
+    : `<button class="btn primary" id="b-show">Show answer</button>`;
+  if (session.revealed) { $("b-again").onclick = again; $("b-good").onclick = gotIt; }
+  else $("b-show").onclick = reveal;
+}
+
+function renderChips() {
+  const chips = $("chips");
+  const allOn = DECKS.every(d => prefs.decks.includes(d.id));
+  chips.innerHTML = `<button type="button" class="chip" data-id="ALL" aria-pressed="${allOn}">All</button>` +
+    DECKS.map(d => {
+      const n = d.cards.filter(a => prefs.extras || !a[4]).length;
+      return `<button type="button" class="chip" data-id="${d.id}" aria-pressed="${prefs.decks.includes(d.id)}">${esc(d.name)} <small>${n}</small></button>`;
+    }).join("");
+}
+
+function renderList() {
+  const cards = pool();
+  $("count").textContent = `${cards.length} words selected`;
+  $("list-summary").textContent = `Word list (${cards.length})`;
+  $("list-body").innerHTML = cards.map(c => {
+    const k = known[c.key] || 0;
+    return `<tr><td class="hz">${esc(c.s)}${c.t !== c.s ? `<span class="t">${esc(c.t)}</span>` : ""}</td><td class="py">${esc(c.p)}</td><td>${esc(c.e)}</td><td class="k">${k ? "✓".repeat(Math.min(k, 3)) : ""}</td></tr>`;
+  }).join("");
+}
+
+function renderSegs() {
+  for (const [id, key] of [["seg-front", "front"], ["seg-script", "script"]])
+    for (const b of $(id).querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.v === prefs[key]));
+  $("extras").checked = prefs.extras;
+}
+
+function savePrefs() { store.set("prefs", prefs); }
+function refreshAll(restart) { renderChips(); renderSegs(); renderList(); if (restart) start(pool()); else render(); }
+
+$("chips").addEventListener("click", ev => {
+  const b = ev.target.closest(".chip"); if (!b) return;
+  const id = b.dataset.id;
+  if (id === "ALL") prefs.decks = DECKS.every(d => prefs.decks.includes(d.id)) ? [] : DECKS.map(d => d.id);
+  else prefs.decks = prefs.decks.includes(id) ? prefs.decks.filter(x => x !== id) : prefs.decks.concat(id);
+  savePrefs(); refreshAll(true);
+});
+for (const [id, key] of [["seg-front", "front"], ["seg-script", "script"]])
+  $(id).addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (!b) return;
+    prefs[key] = b.dataset.v; savePrefs(); renderSegs(); render();
+  });
+$("extras").addEventListener("change", ev => { prefs.extras = ev.target.checked; savePrefs(); refreshAll(true); });
+$("restart").addEventListener("click", () => start(pool()));
+$("card").addEventListener("click", reveal);
+
+let resetArmed = false;
+$("reset").addEventListener("click", () => {
+  if (!resetArmed) { resetArmed = true; $("reset").textContent = "Tap again to erase all progress"; setTimeout(() => { resetArmed = false; $("reset").textContent = "Reset progress"; }, 4000); return; }
+  known = {}; store.set("known", known); resetArmed = false; $("reset").textContent = "Reset progress"; refreshAll(true);
+});
+
+document.addEventListener("keydown", ev => {
+  if (ev.target.closest && ev.target.closest("input, summary")) return;
+  if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+  const k = ev.key.toLowerCase();
+  if (k === " " || k === "enter") { if (ev.target.tagName === "BUTTON") return; ev.preventDefault(); if (!session.revealed) reveal(); else gotIt(); }
+  else if (k === "1" || k === "j") { if (session.revealed) again(); }
+  else if (k === "2" || k === "k") { if (session.revealed) gotIt(); }
+  else if (k === "s" && session.current) speak(session.current.s);
+});
+if (hasSpeech) { try { speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged = () => {}; } catch (e) {} }
+
+refreshAll(true);
+</script>
+
+</body>
+</html>
